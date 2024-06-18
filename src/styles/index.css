@@ -86,7 +86,8 @@ body {
   background-image: url('/public/medias/background.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.4; /* Adjust the opacity value here */
+  opacity: 0.4;
+  /* Adjust the opacity value here */
   z-index: -1;
 }
 
@@ -136,7 +137,7 @@ body {
   transition: color 0.3s;
 }
 
-social-links a:hover {
+.social-links a:hover {
   color: #007bff;
 }
 
@@ -295,7 +296,7 @@ social-links a:hover {
   color: #0056b3;
 }
 
-input{
+input {
   border: #000000 1px solid;
   border-radius: 50px;
 }
@@ -356,4 +357,75 @@ button {
 
 button:hover {
   background: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-radius: 0;
+  }
+
+  .nav-menu ul li {
+    margin: 0 10px;
+  }
+
+  #home {
+    flex-direction: column;
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  #home .profile-pic {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  #home h1 {
+    font-size: 3rem;
+  }
+
+  #home p {
+    font-size: 1.2rem;
+  }
+
+  .skills {
+    flex-direction: column;
+  }
+
+  .portfolio {
+    margin-top: 5rem;
+    height: auto;
+  }
+
+  .contact {
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  #home h1 {
+    font-size: 2.5rem;
+  }
+
+  #home p {
+    font-size: 1rem;
+  }
+
+  .skill {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+
+  .portfolio input[type="text"] {
+    width: 100%;
+  }
 }
