@@ -73,7 +73,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 48rem;
+  height: 50rem;
 }
 
 #home::before {
@@ -232,6 +232,8 @@ social-links a:hover {
 /* Portfolio section */
 
 .portfolio {
+  margin-top: 10rem;
+  height: 50rem;
   padding: 40px 20px;
   text-align: center;
 }
@@ -291,4 +293,67 @@ social-links a:hover {
 
 .project-card a:hover {
   color: #0056b3;
+}
+
+input{
+  border: #000000 1px solid;
+  border-radius: 50px;
+}
+
+/* Contact section */
+
+.contact {
+  height: 50rem;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
 }
