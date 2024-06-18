@@ -26,7 +26,7 @@ const Competences = () => {
 
   const otherSkills = [
     "Portugais: maternelle",
-    "Anglais professionnel",
+    "Anglais: professionnel",
     "Autonome",
     "Ponctuel",
   ];
@@ -48,30 +48,34 @@ const Competences = () => {
             </div>
           ))}
         </div>
-        <div className="experiences">
-          <h2>Mes Expériences</h2>
-          {experiences.map((exp, index) => (
-            <div className="experience" key={index}>
-              <h3>{exp.title}</h3>
-              <p>{exp.description}</p>
+        <div className="competence-details">
+          <div className="experiences">
+            <h2>Mes Expériences</h2>
+            {experiences.map((exp, index) => (
+              <div className="experience" key={index}>
+                <h3>{exp.title}</h3>
+                <p>{exp.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="other-skills-hobbies">
+            <div className="other-skills">
+              <h2>Autres Compétences</h2>
+              <ul>
+                {otherSkills.map((skill, index) => (
+                  <li key={index}>{skill}</li>
+                ))}
+              </ul>
             </div>
-          ))}
-        </div>
-        <div className="other-skills">
-          <h2>Autres Compétences</h2>
-          <ul>
-            {otherSkills.map((skill, index) => (
-              <li key={index}>{skill}</li>
-            ))}
-          </ul>
-        </div>
-        <div className="hobbies">
-          <h2>Hobbies</h2>
-          <ul>
-            {hobbies.map((hobby, index) => (
-              <li key={index}>{hobby}</li>
-            ))}
-          </ul>
+            <div className="hobbies">
+              <h2>Hobbies</h2>
+              <ul>
+                {hobbies.map((hobby, index) => (
+                  <li key={index}>{hobby}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
