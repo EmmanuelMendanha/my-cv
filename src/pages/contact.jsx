@@ -42,7 +42,7 @@ const Contact = () => {
       <h2>Contactez-moi</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Votre email:</label>
           <input
             type="email"
             id="email"

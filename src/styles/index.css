@@ -349,7 +349,7 @@ button {
   font-size: 1rem;
   color: #fff;
   background: #007bff;
-  border: none;
+  border: 1px solid #007bff;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s;
