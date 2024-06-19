@@ -1,6 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import ProfilPic from "../../public/medias/profil.png";
+import ProfilPic from "../assets/medias/profil.png";
 
 const Home = () => {
   return (

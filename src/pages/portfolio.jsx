@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import ProjectSupa from '../../public/medias/supakar.png';
-import ProjectBnb from '../../public/medias/bnb.png';
-import ProjectCinemax from '../../public/medias/cinemax.png';
+import ProjectSupa from '../assets/medias/supakar.png';
+import ProjectBnb from '../assets/medias/bnb.png';
+import ProjectCinemax from '../assets/medias/cinemax.png';
 
 const projectsData = [
   {
