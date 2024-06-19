@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 
+import ProjectSupa from '../../public/medias/supakar.png';
+import ProjectBnb from '../../public/medias/bnb.png';
+import ProjectCinemax from '../../public/medias/cinemax.png';
+
 const projectsData = [
   {
     id: 1,
     name: "Supakar GTA",
     technology: "React",
-    image: "./public/medias/supakar.png",
+    image: {ProjectSupa},
     sourceLink: "https://supakar-gta-e-m.vercel.app/",
     description: "Changement de couleur d'une voiture dans le style GTA de façon dynamique.",
   },
@@ -13,7 +17,7 @@ const projectsData = [
     id: 2,
     name: "BnB",
     technology: "Symfony",
-    image: "./public/medias/bnb.png",
+    image: {ProjectBnb},
     sourceLink: "https://github.com/EmmanuelMendanha/bnb-2402",
     description: "Creation d'un site de location de logement entre particuliers.",
   },
@@ -21,7 +25,7 @@ const projectsData = [
     id: 3,
     name: "Cinemax",
     technology: "React",
-    image: "./public/medias/cinemax.png",
+    image: {ProjectCinemax},
     sourceLink: "https://cinemax-ten.vercel.app/",
     description: "Site de recherche de films et séries avec une API externe.",
   },
