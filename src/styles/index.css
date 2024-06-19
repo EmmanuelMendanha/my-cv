@@ -350,8 +350,8 @@ input {
   padding: 10px 20px;
   font-size: 1rem;
   color: #fff;
-  background: green;
-  border: 1px solid #007bff;
+  background: #5abbe8;
+  border: 1px solid #5abbe8;
   border-radius: 5px;
   cursor: pointer;
 }
