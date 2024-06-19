@@ -80,7 +80,7 @@ body {
 #home::before {
   content: '';
   position: absolute;
-  width: 100%;
+  width: 95%;
   height: 100%;
   background-image: url('../assets/medias/background.jpg');
   background-size: cover;
