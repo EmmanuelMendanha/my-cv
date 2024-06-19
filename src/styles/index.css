@@ -1,6 +1,11 @@
 html {
   scroll-behavior: smooth;
 }
+.quantico-regular {
+  font-family: "Quantico", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 /* Styles for the header and navigation */
 .navbar {
@@ -63,9 +68,9 @@ html {
 
 body {
   width: 95%;
-  padding-left: 5%;
-  font-family: 'Roboto', sans-serif;
+  margin-left: auto;
   background: #595959;
+  font-family: "Quantico", sans-serif;
 }
 
 #home {
@@ -92,7 +97,7 @@ body {
 
 #home .profile-pic {
   width: 24rem;
-  height: 24rem;
+  height: 32rem;
   border-radius: 50%;
   margin-left: 8rem;
 }
@@ -139,6 +144,9 @@ body {
 .social-links a:hover {
   color: #007bff;
 }
+
+
+/* Skills section */
 
 .skills {
   display: flex;
@@ -306,7 +314,7 @@ input {
 
 .contact {
   height: 50rem;
-  padding: 20px 20px;
+  padding: 30px 20px;
   text-align: center;
   color: white;
 }
@@ -328,7 +336,7 @@ input {
 
 .form-group input,
 .form-group textarea {
-  width: 60%;
+  width: 65%;
   padding: 10px;
   font-size: 1rem;
   border: 1px solid #ccc;
