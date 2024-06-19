@@ -350,7 +350,7 @@ button {
   padding: 10px 20px;
   font-size: 1rem;
   color: #fff;
-  background: #007bff;
+  background: red;
   border: 1px solid #007bff;
   border-radius: 5px;
   cursor: pointer;
