@@ -15,7 +15,6 @@ function App() {
       <Competences />
       <Portfolio />
       <Contact />
-
     </Router>
   );
 }
