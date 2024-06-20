@@ -4,14 +4,20 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
+  const [touchedEmail, setTouchedEmail] = useState(false);
+  const [touchedMessage, setTouchedMessage] = useState(false);
 
   useEffect(() => {
-    validateEmail();
-  }, [email]);
+    if (touchedEmail) {
+      validateEmail();
+    }
+  }, [email, touchedEmail]);
 
   useEffect(() => {
-    validateMessage();
-  }, [message]);
+    if (touchedMessage) {
+      validateMessage();
+    }
+  }, [message, touchedMessage]);
 
   const validateEmail = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -48,6 +54,9 @@ const Contact = () => {
       // Réinitialiser le formulaire après soumission
       setEmail("");
       setMessage("");
+      setTouchedEmail(false);
+      setTouchedMessage(false);
+      setErrors({});
     } else {
       setErrors(formErrors);
     }
@@ -82,6 +91,7 @@ const Contact = () => {
             type="email"
             id="email"
             value={email}
+            onFocus={() => setTouchedEmail(true)}
             onChange={(e) => setEmail(e.target.value)}
           />
           {errors.email && <p className="error">{errors.email}</p>}
@@ -91,6 +101,7 @@ const Contact = () => {
           <textarea
             id="message"
             value={message}
+            onFocus={() => setTouchedMessage(true)}
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
           {errors.message && <p className="error">{errors.message}</p>}
