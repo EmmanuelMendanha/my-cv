@@ -1,9 +1,57 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
+
+  useEffect(() => {
+    validateEmail();
+  }, [email]);
+
+  useEffect(() => {
+    validateMessage();
+  }, [message]);
+
+  const validateEmail = () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email) {
+      setErrors((prevErrors) => ({ ...prevErrors, email: "L'adresse mail est obligatoire." }));
+    } else if (!emailRegex.test(email)) {
+      setErrors((prevErrors) => ({ ...prevErrors, email: "L'adresse mail ne respecte pas le format attendu." }));
+    } else {
+      setErrors((prevErrors) => {
+        const { email, ...rest } = prevErrors;
+        return rest;
+      });
+    }
+  };
+
+  const validateMessage = () => {
+    if (!message) {
+      setErrors((prevErrors) => ({ ...prevErrors, message: "Le message est obligatoire." }));
+    } else if (message.length < 10) {
+      setErrors((prevErrors) => ({ ...prevErrors, message: "Le message est trop court." }));
+    } else {
+      setErrors((prevErrors) => {
+        const { message, ...rest } = prevErrors;
+        return rest;
+      });
+    }
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const formErrors = validateForm();
+    if (Object.keys(formErrors).length === 0) {
+      alert("Votre message a été envoyé !");
+      // Réinitialiser le formulaire après soumission
+      setEmail("");
+      setMessage("");
+    } else {
+      setErrors(formErrors);
+    }
+  };
 
   const validateForm = () => {
     const newErrors = {};
@@ -22,19 +70,6 @@ const Contact = () => {
     }
 
     return newErrors;
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const formErrors = validateForm();
-    if (Object.keys(formErrors).length === 0) {
-      alert("Votre message a été envoyé !");
-      // Réinitialiser le formulaire après soumission
-      setEmail("");
-      setMessage("");
-    } else {
-      setErrors(formErrors);
-    }
   };
 
   return (
