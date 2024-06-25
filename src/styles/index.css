@@ -313,6 +313,7 @@ input {
 /* Contact section */
 
 .contact {
+  margin-top: 15rem;
   height: 50rem;
   padding: 30px 20px;
   text-align: center;
@@ -412,11 +413,16 @@ input {
   }
 
   .contact {
+    margin-top: 5rem;
     height: auto;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
+
+  .navbar{
+    display: none;
+  }
   #home h1 {
     font-size: 2.5rem;
   }
@@ -426,7 +432,7 @@ input {
   }
 
   .skill {
-    flex: 1 1 100%;
+    flex: 1 2 100%;
     max-width: none;
   }
 
